@@ -91,9 +91,19 @@ public class Pane extends JPanel {
 				int[] temp = new int[arr.length];
 				System.arraycopy(arr, 0, temp, 0, arr.length);
 				sort(temp,comboBox.getSelectedIndex());
+				if(!sorted(temp)) System.out.println("not sorted");//TODO delete this
 				long end = System.currentTimeMillis();
 				long diffrence = end - start;
 				textArea.setText(Arrays.toString(temp)+"\ntime taken: "+diffrence+" ms");
+			}
+
+			private boolean sorted(int[] temp) {
+				for (int i = 0; i < temp.length-1; i++) {
+					if(temp[i]>temp[i+1]){
+						return false;
+					}
+				}
+				return true;
 			}
 		});
 	}
@@ -115,7 +125,7 @@ public class Pane extends JPanel {
 			Sorting.quickSort(arr);
 			break;
 		case 5:
-			Sorting.heapSort(arr);
+			Sorting.heapSort(arr,arr.length);
 			break;
 		}
 	}

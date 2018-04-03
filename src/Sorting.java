@@ -11,7 +11,7 @@ public class Sorting {
 	}
 	public static void selectionSort(int[] arr){
 		for (int i = arr.length-1; i > 0; i--) {
-			int max = arr[0];
+			int max = 0;
 			for (int j = 0; j < i; j++) {
 				if(arr[j]>arr[max]){
 					max = j;
@@ -94,31 +94,28 @@ public class Sorting {
 		arr[index1] = arr[index2];
 		arr[index2] = temp;
 	}
-	public static void heapSort(int[] arr){
-		//TODO حل المشكل ماي نيغا 
-		for (int i = arr.length-1; i >= 0; i--) {
-			for( int j = i/2; j >= 0; j-- ){
-		        heapify( arr, j, i);
-			}
-			swap(arr,0,i);
+	static void heapSort(int[] a,int size){
+		for (int i = a.length/2-1; i>=0; i--) {
+			trickle(a,size,i);
+		}
+		
+		for (int i = a.length-1; i >= 0; i--) {
+			int temp = a[0];
+			a[0] = a[i];
+			a[i] = temp;
+			trickle(a,0,i);
 		}
 	}
-	private static void heapify( int[ ] arr, int i,int max )
-	{
-	    int left = 2 * i + 1;
-	    int right = 2 * i + 2;
-	    int largest = i;
-
-	    if( left < max && arr[ left ] > arr[ largest ] )
-	        largest = left;
-	    if( right < max && arr[ right ] > arr[ largest ] )
-	        largest = right;
-	    if( largest != i )
-	    {
-	        int temp = arr[ i ];
-	        arr[ i ] = arr[ largest ];
-	        arr[ largest ] = temp;
-	        heapify( arr, largest, max );
-	    }
+	public static void trickle(int[] a, int index,int size){
+		int right = index*2+2,left = right -1;
+		int max = index;
+		if(left<size&&a[left]>a[max]) max = left;
+		if(right<size&&a[right]>a[max]) max = right;
+		if(max!=index){
+			int temp = a[max];
+			a[max] = a[index];
+			a[index] = temp;
+			trickle(a, max,size);
+		}
 	}
 }
