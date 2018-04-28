@@ -10,13 +10,13 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class Pane extends JPanel {
+public class SortPane extends JPanel {
 	private JTextField t1;
 	int[] arr;
 	int randomSize = 11,randomBound= 100;
 	String[] algos = new String[]{"Bubble sort","Selection sort","Insertion sort","Merge sort","Quick sort","Heap sort"};
 	JComboBox comboBox = new JComboBox(algos);
-	public Pane() {
+	public SortPane() {
 		setLayout(null);
 		
 		JButton btnConfirm = new JButton("Confirm");
