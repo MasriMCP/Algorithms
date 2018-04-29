@@ -1,9 +1,9 @@
 package Graph;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.NoSuchElementException;
-import java.util.Stack;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.*;
 
 public class ListGraph<T> extends Graph<T>{
 	HashMap<T,HashMap<T,Integer>> list = new HashMap<>();
@@ -144,5 +144,30 @@ public class ListGraph<T> extends Graph<T>{
 			return null;
 		}
 		
+	}
+	public static ListGraph<String> readGraph(String fileName){
+		ListGraph<String> g = new ListGraph<String>(true);
+		try(BufferedReader s = new BufferedReader(new FileReader(new File(fileName)))){
+			boolean d = Boolean.parseBoolean(s.readLine().toLowerCase());
+			g = new ListGraph<String>(d);
+			s.readLine();
+			String str = "";
+			while (!(str=s.readLine()).equals("*")){
+				g.insert(str);
+			}
+			String[] temp;
+
+			while (!(str=s.readLine()).equals("*")){
+				temp = str.split(" ");
+				g.connect(temp[0],temp[1],Integer.parseInt(temp[2]));
+			}
+		}
+		catch(IOException ex){
+			ex.printStackTrace();
+		}
+		catch (NoSuchElementException ex){
+			throw ex;
+		}
+		return g;
 	}
 }
