@@ -146,12 +146,26 @@ public class ListGraph<T> extends Graph<T>{
 		
 	}
 	public static ListGraph<String> readGraph(String fileName){
+        /*
+        files should be written in the following format:
+        true/ false : true if directed false if not
+        *(asterisk)
+        vertex 1: list of vertices (case sensitive)
+        Paris
+        London
+        etc...
+        *(asterisk)
+        vertex1 vertex2 weight : space separated
+        Paris London 2500
+        etc...
+        *(asterisk)
+         */
 		ListGraph<String> g = new ListGraph<String>(true);
 		try(BufferedReader s = new BufferedReader(new FileReader(new File(fileName)))){
 			boolean d = Boolean.parseBoolean(s.readLine().toLowerCase());
 			g = new ListGraph<String>(d);
-			s.readLine();
 			String str = "";
+            s.readLine();
 			while (!(str=s.readLine()).equals("*")){
 				g.insert(str);
 			}
