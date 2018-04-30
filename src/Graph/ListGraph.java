@@ -139,7 +139,7 @@ public class ListGraph<T> extends Graph<T> {
         private int index = 0;
         private LinkedList<T> visited = new LinkedList<>();
         Stack<T> s = new Stack<>();
-        T current = list.keySet().iterator().next();
+        T current = order>0?list.keySet().iterator().next():null;
 
         public GraphIterator() {
             s.push(current);
@@ -153,7 +153,7 @@ public class ListGraph<T> extends Graph<T> {
         @Override
         public T next() {
             //using Depth First Search
-            if (hasNext()) {
+            if (!s.isEmpty()) {
                 current = s.peek();
                 s.pop();
                 if (!visited.contains(current)) {
