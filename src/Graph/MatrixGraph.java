@@ -1,7 +1,9 @@
 package Graph;
 
 import java.util.Iterator;
-
+/*
+الكلاس هذا كلو مش مهم بالنسبة الي عملتو بس عشان floyd و زهقت في نص ال code و بطلت
+ */
 public class MatrixGraph extends Graph<Integer>{
 	private int[][] mat;
 	public MatrixGraph(int x) {
@@ -17,7 +19,7 @@ public class MatrixGraph extends Graph<Integer>{
 	}
 	@Override
 	public void insert(Integer t) {
-		// TODO Auto-generated method stub
+		// TODO كملو
 		
 	}
 
@@ -31,7 +33,7 @@ public class MatrixGraph extends Graph<Integer>{
 
 	@Override
 	public void delete(Integer t) {
-		// TODO Auto-generated method stub
+		// TODO كملو
 		
 	}
 
@@ -63,6 +65,7 @@ public class MatrixGraph extends Graph<Integer>{
 		}
 	}
 	public int[][] floyd(){
+		//not sure if it even works
 		int[][] temp = new int[order][order];
 		for (int k = 0; k < mat.length; k++) {
 			for (int i = 0; i < mat.length; i++) {
