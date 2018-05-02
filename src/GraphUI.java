@@ -13,7 +13,7 @@ public class GraphUI extends JPanel implements ActionListener, MouseListener {
     private static GraphUI ourInstance = new GraphUI();
     private Timer timer = new Timer(25,this);
     private ListGraph<String> graph = new ListGraph<String>(true);
-    HashMap<String,Point> coordinateList = new HashMap<>();
+    private HashMap<String,Point> coordinateList = new HashMap<>();
     private Font nameFont= new Font("monospace",Font.BOLD,14);
     public static GraphUI getInstance() {
         return ourInstance;
@@ -29,13 +29,12 @@ public class GraphUI extends JPanel implements ActionListener, MouseListener {
         super.paintComponent(g);
         g.setFont(nameFont);
 
-        for(String vertex: graph){
+        for(String vertex: coordinateList.keySet()){
             g.setColor(Color.RED);
-            if(vertex!=null) //TODO vertex is null for some reason
-            g.fillOval(coordinateList.get(vertex).x,coordinateList.get(vertex).y,R,R);
-            g.setColor(Color.BLACK);
+            g.fillOval((coordinateList.get(vertex)).x,(coordinateList.get(vertex)).y,R,R);
             g.drawString(vertex,coordinateList.get(vertex).x+R/2, coordinateList.get(vertex).y+R/2);
         }
+        g.dispose();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -48,6 +47,7 @@ public class GraphUI extends JPanel implements ActionListener, MouseListener {
         String temp = JOptionPane.showInputDialog(null,"name?");
         graph.insert(temp);
         coordinateList.put(temp,new Point(e.getX(),e.getY()));
+        repaint();
     }
 
     @Override
