@@ -1,17 +1,11 @@
 import Graph.ListGraph;
-
-import javax.swing.*;
+import Graph.Tree;
 
 public class Main{
-	public static void main(String[] args) {
-		JFrame frame = new JFrame("Graph");
-		frame.add(GraphUI.getInstance());
-		frame.setResizable(false);
-		frame.setVisible(true);
-		frame.setSize(1000, 1000);
-		frame.setLocationRelativeTo(null);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+	public static void main(String[] args){
+		Tree t = new Tree();
+		t.insert(5,42,23,52,7,9,8,3);
+
 	}
-	
+
 }
