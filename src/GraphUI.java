@@ -5,7 +5,9 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.HashMap;
 import java.util.LinkedList;
-
+/*
+this project is on hold for a while, or forever lol.
+ */
 public class GraphUI extends JPanel implements ActionListener, MouseListener,MouseMotionListener {
     private static GraphUI ourInstance = new GraphUI();
     private Timer timer = new Timer(10,this);
