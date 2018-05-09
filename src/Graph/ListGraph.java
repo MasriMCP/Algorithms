@@ -72,6 +72,13 @@ public class ListGraph<T> extends Graph<T> {
             throw new NoSuchElementException("no element " + t2.toString() + " is conneted to element " + t1.toString());
         }
     }
+    public LinkedList<Edge<T>> getEdgeList(){
+        LinkedList<Edge<T>> edgeList = new LinkedList<Edge<T>>();
+        for(T v: this){
+
+        }
+        return null;
+    }
 
     public String dijkstra(T t1, T t2) {
         LinkedList<T> unvisited = new LinkedList<>();
