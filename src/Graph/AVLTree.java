@@ -35,17 +35,19 @@ public class AVLTree<T extends  Comparable<T>> {
         int balance = node.getBalance();
 
         if(balance > 1 && node.left.element.compareTo(t)>0){
+            node.right = rightRotate(node);
             return leftRotate(node);
         }
         if(balance < -1 && node.right.element.compareTo(t)<0){
-            return rightRotate(node);
-        }
-        if(balance > 1 && node.left.element.compareTo(t)<0){
             node.left = leftRotate(node);
             return rightRotate(node);
         }
+        if(balance > 1 && node.left.element.compareTo(t)<0){
+
+            return rightRotate(node);
+        }
         if(balance < -1 && node.right.element.compareTo(t)>0){
-            node.right = rightRotate(node);
+
             return leftRotate(node);
         }
 

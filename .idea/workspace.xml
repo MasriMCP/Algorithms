@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="396e1e0f-1f02-4933-913b-f62a195990a8" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/AVLTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,35 +20,32 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#165#174#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AVLTree.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Graph/AVLTree.java">
+      <file leaf-file-name="BTree.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/BTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="90">
+              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding>
-                <element signature="e#125#126#0" expanded="true" />
-                <element signature="e#157#158#0" expanded="true" />
-                <element signature="e#186#187#0" expanded="true" />
-                <element signature="e#210#211#0" expanded="true" />
-                <element signature="e#248#249#0" expanded="true" />
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#294#295#0" expanded="true" />
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#2087#2088#0" expanded="true" />
-                <element signature="e#2133#2134#0" expanded="true" />
+                <element signature="e#183#184#0" expanded="true" />
+                <element signature="e#229#230#0" expanded="true" />
+                <element signature="e#288#289#0" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#385#386#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
+                <element signature="e#201#202#0" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,16 +82,17 @@
         <option value="$PROJECT_DIR$/src/VisualGraph.java" />
         <option value="$PROJECT_DIR$/src/GraphUI.java" />
         <option value="$PROJECT_DIR$/src/Graph/Edge.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Graph/ListGraph.java" />
         <option value="$PROJECT_DIR$/src/Graph/AVLTree.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/BTree.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="27" />
-    <option name="width" value="640" />
+    <option name="width" value="630" />
     <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -101,38 +102,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Graph" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -282,11 +252,19 @@
       <option name="project" value="LOCAL" />
       <updated>1525896285507</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="new AVL tree data type">
+      <created>1525944046857</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1525944046858</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="650" height="743" extended-state="4" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -296,13 +274,12 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3270142" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3270142" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.328594" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.4969231" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.328594" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -314,6 +291,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.328594" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -331,16 +309,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GraphUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph/ListGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2397">
@@ -586,9 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -606,13 +571,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graph/Edge.java" />
     <entry file="file://$PROJECT_DIR$/src/Graph/ListGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -620,31 +579,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Graph/AVLTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="124">
+          <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
           <folding>
-            <element signature="e#165#174#0" expanded="true" />
+            <element signature="e#2102#2103#0" expanded="true" />
+            <element signature="e#2148#2149#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph/AVLTree.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="90">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding>
-            <element signature="e#125#126#0" expanded="true" />
-            <element signature="e#157#158#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-            <element signature="e#2133#2134#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
           </folding>
         </state>
       </provider>
