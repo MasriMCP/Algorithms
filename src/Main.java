@@ -5,9 +5,8 @@ import javax.swing.*;
 
 public class Main{
 	public static void main(String[] args) {
-		BTree t = new BTree(14,-1);
-
-		
+		ListGraph<String> g = ListGraph.readGraph("g.txt");
+		System.out.println(g.isConnected());
 	}
 	
 }

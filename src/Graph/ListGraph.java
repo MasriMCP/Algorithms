@@ -122,6 +122,13 @@ public class ListGraph<T> extends Graph<T> {
     public boolean connected(T t1, T t2) {
         return adjacent(t1).containsKey(t2);
     }
+    public boolean isConnected(){
+        List<T> temp = new LinkedList<>(list.keySet());
+        for(T i:this){
+            temp.remove(i);
+        }
+        return temp.isEmpty();
+    }
     public boolean contains(T t){
         return list.keySet().contains(t);
     }
@@ -147,7 +154,7 @@ public class ListGraph<T> extends Graph<T> {
 
         @Override
         public boolean hasNext() {
-            return index < order;
+            return index < order&&!s.isEmpty();
         }
 
         @Override
@@ -176,9 +183,10 @@ public class ListGraph<T> extends Graph<T> {
     public static ListGraph<String> readGraph(String fileName) {
         /*
         files should be written in the following format:
-        true/ false : true if directed false if not
+
+        directed/undirected
         *(asterisk)
-        vertex 1: list of vertices (case sensitive)
+        vertex 1: list of vertices (case sensitive, must be alphanumerical strings)
         Paris
         London
         etc...
@@ -190,18 +198,21 @@ public class ListGraph<T> extends Graph<T> {
          */
         ListGraph<String> g = new ListGraph<String>(true);
         try (BufferedReader s = new BufferedReader(new FileReader(new File(fileName)))) {
-            boolean d = Boolean.parseBoolean(s.readLine().toLowerCase());
+            boolean d = s.readLine().toLowerCase().equals("directed");
             g = new ListGraph<String>(d);
             String str = "";
             s.readLine();
             while (!(str = s.readLine()).equals("*")) {
+                if(str.matches("[A-Za-z0-9]+"))
                 g.insert(str);
             }
             String[] temp;
 
             while (!(str = s.readLine()).equals("*")) {
-                temp = str.split(" ");
+                if(str.matches("[A-Za-z\\d]+\\s+[A-Za-z\\d]+\\s+\\d+")){
+                temp = str.split("\\s+");
                 g.connect(temp[0], temp[1], Integer.parseInt(temp[2]));
+                }
             }
         } catch (IOException ex) {
             ex.printStackTrace();

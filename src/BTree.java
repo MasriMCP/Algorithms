@@ -9,7 +9,7 @@ public class BTree{
         if(order<2){throw new IllegalArgumentException("order must be greater than or equal to 2");}
     }
     public void insert(int t){
-
+        root.insert(t);
     }
     private class BTreeNode{
         Node[] list;
@@ -19,22 +19,38 @@ public class BTree{
             list = new Node[order];
         }
         void insert(int t){
-            list[size] = new Node(t);
-            Arrays.sort(list);
-            size++;
+            if(!leaf){
+                for(int i = 0;i<order;i++){
+                    if(list[i].element>t){
+                        list[i].left.insert(t);
+                        break;
+                    }
+                }
+
+            }
+           else{
+                if(size<order) {
+                    list[size] = new Node(t);
+                    Arrays.sort(list);
+                    size++;
+                }
+                else{
+
+                }
+            }
         }
     }
     private class Node implements Comparable<Node>{
-        private int[] left,right;
+        private BTreeNode left,right;
         private int element;
         public Node(int element) {
             this.element = element;
         }
-        public int[] getLeft() {
+        public BTreeNode getLeft() {
             return left;//DO NOT USE THIS METHOD TO INSERT/DELETE FROM TREE
         }
 
-        public int[] getRight() {
+        public BTreeNode getRight() {
             return right;//DO NOT USE THIS METHOD TO INSERT/DELETE FROM TREE
         }
 
